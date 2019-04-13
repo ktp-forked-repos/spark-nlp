@@ -37,6 +37,7 @@ class DeepSentenceDetectorTestSpec extends FlatSpec with DeepSentenceDetectorBeh
     .setEmbeddingsSource("src/test/resources/ner-corpus/embeddings.100d.test.txt",
       100, WordEmbeddingsFormat.TEXT)
     .setCaseSensitive(true)
+    .setDimension(2)
 
   private val strongNer = new NerDLApproach()
     .setInputCols("document", "token", "glove")
